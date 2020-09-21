@@ -22,12 +22,12 @@ namespace BlindLowVisionProject.Controllers
         {
             var model = _customerRepository.GetAllCustomers();
             return View(model);
-        }
-        public ViewResult Details(int id)
+        }       
+        public ViewResult Details(int? id)
         {
             HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Customer = _customerRepository.GetCustomer(id),
+                Customer = _customerRepository.GetCustomer(1),
                 PageTitle = "Customer Details"
             };
             
